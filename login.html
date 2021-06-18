@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <html lang="zh-tw">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="Login-In">
+        <div class="form">
+            <form class="login">
+                <div id="login">Login</div>
+                <input type="text" placeholder="Username" id="user">
+                <input type="password" placeholder="Password" id="pass">
+                <input type="submit" value="Login In" id="button-login" onclick="validate()">
+                <a href="#">Don't have a account?</a>
+            </form>
+            <form class="register">
+                <div>Register</div>
+                <input type="email" placeholder="Gmail">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm-Password">
+                <input type="submit" value="Create" id="register" onclick="validate1()">
+                <a href="#">Login?</a>
+            </form>
+        </div>
+    </div>
+    <script type="text/JavaScript">
+        $(".login a").click(function() {
+            $("form").animate({height: "toggle", opacity: 'toggle'} , "slow" );
+        });
+        $(".register a").click(function() {
+            $('form').animate({height: "toggle", opacity: 'toggle'} , "slow");
+        });
+    </script>
+</body>
